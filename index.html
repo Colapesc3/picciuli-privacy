@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pìcciuli — casa e lavoro, contati a parte</title>
+<meta name="description" content="Pìcciuli tiene separate le spese personali e quelle della partita IVA in un'unica app per iPhone, iPad e Mac.">
+<link rel="icon" href="icona-180.png">
+<link rel="apple-touch-icon" href="icona-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pìcciuli — casa e lavoro, contati a parte">
+<meta property="og:description" content="Le spese personali e quelle della partita IVA, separate. Per iPhone, iPad e Mac.">
+<meta property="og:image" content="https://colapesc3.github.io/picciuli-privacy/anteprima-social.png">
+<meta property="og:url" content="https://colapesc3.github.io/picciuli-privacy/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --fondo:#04240E;
+    --fondo-alt:#0A3517;
+    --oro:#F0CB1A;
+    --oro-scuro:#C9A812;
+    --crema:#ECE8D6;
+    --verde-chiaro:#8FB894;
+    --bordo:rgba(240,203,26,.22);
+    --serif:"Newsreader",Georgia,serif;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--fondo);
+    color:var(--crema);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+  }
+  a{color:var(--oro)}
+  img{max-width:100%;display:block}
+  .contenitore{width:100%;max-width:940px;margin:0 auto;padding:0 24px}
+
+  /* ---------- apertura ---------- */
+  .apertura{position:relative;overflow:hidden;padding:72px 0 80px;text-align:center}
+  .sweep{
+    position:absolute;top:-260px;left:50%;width:900px;height:900px;
+    margin-left:-450px;pointer-events:none;opacity:.5;
+    background:conic-gradient(from 0deg,rgba(240,203,26,.30) 0deg,rgba(240,203,26,0) 62deg,rgba(240,203,26,0) 360deg);
+    border-radius:50%;
+    animation:gira 9s linear infinite;
+  }
+  .cerchi{
+    position:absolute;top:-260px;left:50%;width:900px;height:900px;
+    margin-left:-450px;pointer-events:none;border-radius:50%;
+    background:
+      radial-gradient(circle,transparent 0 148px,rgba(240,203,26,.10) 148px 149px,transparent 149px),
+      radial-gradient(circle,transparent 0 268px,rgba(240,203,26,.09) 268px 269px,transparent 269px),
+      radial-gradient(circle,transparent 0 388px,rgba(240,203,26,.07) 388px 389px,transparent 389px);
+  }
+  @keyframes gira{to{transform:rotate(360deg)}}
+  .apertura > .contenitore{position:relative}
+  .icona{width:132px;height:132px;border-radius:30px;margin:0 auto 26px;box-shadow:0 14px 44px rgba(0,0,0,.5)}
+  .marchio{
+    font-family:var(--serif);font-weight:400;font-size:clamp(3rem,10vw,4.6rem);
+    line-height:1;letter-spacing:-.015em;color:var(--oro);margin:0 0 22px;
+  }
+  .titolo{
+    font-family:var(--serif);font-weight:300;font-size:clamp(1.55rem,4.6vw,2.35rem);
+    line-height:1.25;margin:0 auto 20px;max-width:19ch;color:var(--crema);
+  }
+  .occhiello{max-width:52ch;margin:0 auto 34px;color:var(--verde-chiaro)}
+  .bottone{
+    display:inline-block;background:var(--oro);color:#04240E;text-decoration:none;
+    font-weight:600;font-size:1.05rem;padding:15px 34px;border-radius:999px;
+    transition:background .15s ease;
+  }
+  .bottone:hover,.bottone:focus-visible{background:#FFDD4A}
+  .sotto-bottone{margin-top:16px;font-size:.95rem;color:var(--verde-chiaro)}
+
+  /* ---------- sezioni ---------- */
+  .sezione{padding:64px 0;border-top:1px solid var(--bordo)}
+  .sezione h2{
+    font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.6vw,2rem);
+    line-height:1.25;margin:0 0 18px;color:var(--oro);
+  }
+  .sezione p{max-width:66ch;margin:0 0 18px}
+
+  .video{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;border:1px solid var(--bordo)}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  .schermate{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:12px}
+  .schermate figure{margin:0}
+  .schermate img{border-radius:18px;border:1px solid var(--bordo);background:var(--fondo-alt)}
+  .schermate figcaption{margin-top:14px;font-size:.95rem;line-height:1.5;color:var(--verde-chiaro)}
+
+  .punti{display:grid;grid-template-columns:1fr 1fr;gap:38px 44px;margin-top:8px}
+  .punti h3{
+    font-family:var(--sans);font-weight:600;font-size:1.05rem;margin:0 0 8px;color:var(--crema);
+  }
+  .punti p{margin:0;color:var(--verde-chiaro);max-width:44ch}
+
+  /* ---------- chiusura ---------- */
+  .chiusura{text-align:center;padding:70px 0 24px;border-top:1px solid var(--bordo)}
+  .chiusura .bottone{margin-bottom:12px}
+  footer{padding:34px 0 56px;font-size:.92rem;color:var(--verde-chiaro);text-align:center}
+  footer nav{margin-bottom:14px}
+  footer a{margin:0 10px;display:inline-block;line-height:2}
+
+  a:focus-visible,.bottone:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+
+  @media (max-width:760px){
+    .schermate{grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto}
+    .punti{grid-template-columns:1fr;gap:30px}
+    .sezione{padding:52px 0}
+    .apertura{padding:52px 0 64px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sweep{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="apertura">
+  <div class="sweep" aria-hidden="true"></div>
+  <div class="cerchi" aria-hidden="true"></div>
+  <div class="contenitore">
+    <img class="icona" src="icona.png" alt="Icona dell'app Pìcciuli">
+    <h1 class="marchio">Pìcciuli</h1>
+    <p class="titolo">Casa e lavoro, contati a parte.</p>
+    <p class="occhiello">Un'app di finanze per chi ha la partita IVA e non vuole tenere due archivi. Le spese personali e quelle professionali restano separate, e si guardano insieme quando serve.</p>
+    <a class="bottone" href="https://apps.apple.com/it/app/picciuli/id6793956859?ct=sito&amp;mt=8">Scarica su App Store</a>
+    <p class="sotto-bottone">Per iPhone, iPad e Mac. Gratis.</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="sezione">
+    <div class="contenitore">
+      <h2>Cinquanta secondi per capire com'è fatta</h2>
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/lDH0_CQH_XU" title="Pìcciuli, presentazione dell'app" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione">
+    <div class="contenitore">
+      <h2>Tre schermate</h2>
+      <div class="schermate">
+        <figure>
+          <img src="schermata-lobby.png" alt="Menù iniziale di Pìcciuli con dashboard, scansione scontrino, spese condivise, salvadanaio, impostazioni e temi" loading="lazy" width="640" height="1385">
+          <figcaption>Il menù iniziale. L'interruttore in alto sceglie se guardare le finanze personali, quelle professionali o entrambe.</figcaption>
+        </figure>
+        <figure>
+          <img src="schermata-radar.png" alt="Radar Previsioni con le aree di spesa, l'andamento e i suggerimenti" loading="lazy" width="640" height="1385">
+          <figcaption>Il radar. Le aree di spesa su un quadrante: quando una esce dall'andamento abituale si vede prima che diventi un problema.</figcaption>
+        </figure>
+        <figure>
+          <img src="schermata-report.png" alt="Grafici e report con le spese per categoria del mese" loading="lazy" width="640" height="1385">
+          <figcaption>Grafici e report. Spese per categoria, andamento e bilancio, per settimana, mese, trimestre o anno.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione">
+    <div class="contenitore">
+      <h2>Come funziona</h2>
+      <div class="punti">
+        <div>
+          <h3>Due bilanci, un'app sola</h3>
+          <p>Ogni movimento nasce personale o professionale. I totali restano distinti, senza doppie installazioni e senza fogli di calcolo a parte.</p>
+        </div>
+        <div>
+          <h3>Scontrini e fatture</h3>
+          <p>La fotocamera legge lo scontrino e compila il movimento. I file esistenti si importano da CSV o XLSX.</p>
+        </div>
+        <div>
+          <h3>Ricorrenze e progetti</h3>
+          <p>Affitti, rate e abbonamenti si inseriscono una volta. Budget e progetti tengono il conto di quanto resta.</p>
+        </div>
+        <div>
+          <h3>I dati restano dove sono</h3>
+          <p>L'archivio vive sul dispositivo e si sincronizza col proprio iCloud. Nessun server di mezzo. L'intelligenza artificiale si collega solo se la si vuole, ed è la propria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="chiusura">
+  <div class="contenitore">
+    <a class="bottone" href="https://apps.apple.com/it/app/picciuli/id6793956859?ct=sito&amp;mt=8">Scarica su App Store</a>
+    <p class="sotto-bottone">Per iPhone, iPad e Mac. Gratis.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="contenitore">
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="supporto.html">Assistenza</a>
+      <a href="https://www.youtube.com/@picciuliapp">YouTube</a>
+      <a href="https://www.instagram.com/picciuliapp/">Instagram</a>
+      <a href="https://www.tiktok.com/@picciuliapp">TikTok</a>
+      <a href="https://x.com/picciuliapp">X</a>
+      <a href="https://www.facebook.com/profile.php?id=61594092360463">Facebook</a>
+    </nav>
+    <p>Pìcciuli — app per iPhone, iPad e Mac. Assistenza: picciuli.info@proton.me</p>
+  </div>
+</footer>
+
+</body>
+</html>
