@@ -131,7 +131,7 @@
     <h1 class="marchio">Pìcciuli</h1>
     <p class="titolo">Casa e lavoro, contati a parte.</p>
     <p class="occhiello">Un'app di finanze per chi ha la partita IVA e non vuole tenere due archivi. Le spese personali e quelle professionali restano separate, e si guardano insieme quando serve.</p>
-    <a class="bottone" href="https://apps.apple.com/it/app/picciuli/id6793956859?ct=sito&amp;mt=8">Scarica su App Store</a>
+    <a class="bottone js-store" href="https://apps.apple.com/it/app/picciuli/id6793956859?pt=129194903&amp;ct=sito&amp;mt=8">Scarica su App Store</a>
     <p class="sotto-bottone">Per iPhone, iPad e Mac. Gratis.</p>
   </div>
 </header>
@@ -195,7 +195,7 @@
 
 <section class="chiusura">
   <div class="contenitore">
-    <a class="bottone" href="https://apps.apple.com/it/app/picciuli/id6793956859?ct=sito&amp;mt=8">Scarica su App Store</a>
+    <a class="bottone js-store" href="https://apps.apple.com/it/app/picciuli/id6793956859?pt=129194903&amp;ct=sito&amp;mt=8">Scarica su App Store</a>
     <p class="sotto-bottone">Per iPhone, iPad e Mac. Gratis.</p>
   </div>
 </section>
@@ -215,5 +215,14 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    var consentiti=["instagram","tiktok","facebook","fbgruppi"];
+    var c=new URLSearchParams(location.search).get("c");
+    if(!c||consentiti.indexOf(c)<0)return;
+    var link="https://apps.apple.com/it/app/picciuli/id6793956859?pt=129194903&ct="+c+"&mt=8";
+    document.querySelectorAll("a.js-store").forEach(function(a){a.href=link;});
+  })();
+</script>
 </body>
 </html>
